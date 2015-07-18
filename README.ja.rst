@@ -468,7 +468,7 @@ pikzie.priority(priority)
 謝辞
 ----
 
-- aztmさん
+- atzmさん
  	バグレポートをしてくれました。
  	ebuildを作ってくれました。http://diary.atzm.org/20081201.html#p01
 
