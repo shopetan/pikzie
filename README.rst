@@ -28,18 +28,18 @@ Python.
 Pikzie provides the following features that are lacked in
 unittest.py included in the standard Python distribution:
 
-  * Pythonic API
-  * a lot of assertions
-  * outputs result with useful format for debugging.
+- Pythonic API
+- a lot of assertions
+- outputs result with useful format for debugging.
 
 And Pikzie has the following features:
 
-  * ...
+- ...
 
 Dependencies
 ============
 
-  * Python >= 2.6 (Python 3.x is also supported.)
+- Python >= 2.6 (Python 3.x is also supported.)
 
 Install
 =======
@@ -93,14 +93,14 @@ Here is a template of a test case::
 
   import pikzie
   import test_target_module
-  
+
   class TestYourModule(pikzie.TestCase):
       def setup(self):
           self.setup_called = True
-  
+
       def teardown(self):
           self.setup_called = False
-  
+
       def test_condition(self): # starts with "test_"
           self.assert_true(self.setup_called)
 
@@ -146,19 +146,19 @@ Test result
 Here is an example test result::
 
   ....F..............................
-  
+
   1) Failure: TestLoader.test_collect_test_cases: sorted(test_case_names))
   expected: <['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']>
    but was: <['TestXXX1', 'TestXXX2', 'TestYYY']>
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
   /home/kou/work/python/pikzie/test/test_loader.py:30: test_collect_test_cases(): sorted(test_case_names))
-  
+
   Finished in 0.013 seconds
-  
+
   35 test(s), 55 assertion(s), 1 failure(s), 0 error(s), 0 pending(s), 0 notification(s)
 
 Progress
@@ -207,7 +207,7 @@ outputs a detail of test result because there is a failure::
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
   /home/kou/work/python/pikzie/test/test_loader.py:30: test_collect_test_cases(): sorted(test_case_names))
 
@@ -226,7 +226,7 @@ difference easily::
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
 
 The failed assertion is in test_collect_test_cases() method
@@ -425,7 +425,7 @@ information on failure. For example, you can add Bug ID like
 the following::
 
   import pikzie
-  
+
   class TestYourModule(pikzie.TestCase):
       @pikzie.bug(123)
       def test_invalid_input(self):
@@ -467,12 +467,13 @@ pikzie.priority(priority)
 Thanks
 ------
 
-  * aztm:
+- aztm:
 
-    * reports a bug.
+	reports a bug.
 
-    * makes a ebuild. http://diary.atzm.org/20081201.html#p01
+- makes a ebuild.
+	http://diary.atzm.org/20081201.html#p01
 
-  * Hideo Hattori:
+- Hideo Hattori:
 
-    * reports a bug.
+	reports a bug.
