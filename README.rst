@@ -470,9 +470,7 @@ Thanks
 - aztm:
 
 	reports a bug.
-
-- makes a ebuild.
-	http://diary.atzm.org/20081201.html#p01
+  makes a ebuild. http://diary.atzm.org/20081201.html#p01
 
 - Hideo Hattori:
 
