@@ -12,7 +12,7 @@ Pikzie
 Author
 ======
 
-  * Kouhei Sutou <kou@clear-code.com>
+- Kouhei Sutou <kou@clear-code.com>
 
 License
 =======
