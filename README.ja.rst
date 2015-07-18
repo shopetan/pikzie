@@ -470,7 +470,8 @@ pikzie.priority(priority)
 
 - atzmさん
  	バグレポートをしてくれました。
- 	ebuildを作ってくれました。http://diary.atzm.org/20081201.html#p01
+
+	ebuildを作ってくれました。http://diary.atzm.org/20081201.html#p01
 
 - Hideo Hattoriさん
  	バグレポートをしてくれました。
