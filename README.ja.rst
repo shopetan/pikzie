@@ -12,7 +12,7 @@ Pikzie（ピクジー）
 作者
 ====
 
-  * Kouhei Sutou <kou@clear-code.com>
+* Kouhei Sutou <kou@clear-code.com>
 
 ライセンス
 ==========
@@ -28,9 +28,9 @@ Testing Frameworkです。
 PikzieはPython標準のunittest.pyに欠けている以下の機能を提供し
 ます。
 
-  * PythonらしいAPI
-  * 豊富な表明（assert_*）
-  * デバッグに使いやすい出力結果
+* PythonらしいAPI
+* 豊富な表明（assert_*）
+* デバッグに使いやすい出力結果
 
 上記に加えて以下のような特徴があります。
 
@@ -39,7 +39,7 @@ PikzieはPython標準のunittest.pyに欠けている以下の機能を提供し
 依存関係
 ========
 
-  * Python >= 2.6 （Python 3.xでも可）
+* Python >= 2.6 （Python 3.xでも可）
 
 インストール
 ============
@@ -94,16 +94,16 @@ git::
 
   import pikzie
   import テスト対象のモジュール
-  
+
   class TestYourModule(pikzie.TestCase):
       def setup(self):
           # 初期化用コード
           self.setup_called = True
-  
+
       def teardown(self):
           # 後片付け用コード
           self.setup_called = False
-  
+
       def test_condition(self): # "test_"から始める
           self.assert_true(self.setup_called)
 
@@ -148,19 +148,19 @@ test/run-test.pyに実行権をつけます。::
 テスト結果は例えば以下のようになります。::
 
   ....F..............................
-  
+
   1) Failure: TestLoader.test_collect_test_cases: sorted(test_case_names))
   expected: <['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']>
    but was: <['TestXXX1', 'TestXXX2', 'TestYYY']>
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
   /home/kou/work/python/pikzie/test/test_loader.py:30: test_collect_test_cases(): sorted(test_case_names))
-  
+
   Finished in 0.013 seconds
-  
+
   35 test(s), 55 assertion(s), 1 failure(s), 0 error(s), 0 pending(s), 0 notification(s)
 
 進行状況
@@ -208,7 +208,7 @@ N
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
   /home/kou/work/python/pikzie/test/test_loader.py:30: test_collect_test_cases(): sorted(test_case_names))
 
@@ -228,7 +228,7 @@ N
   diff:
   - ['TestXXX1', 'TestXXX2', 'TestYYY', 'TestZZZ']
   ?                                   -----------
-  
+
   + ['TestXXX1', 'TestXXX2', 'TestYYY']
 
 また、この失敗した表明は
@@ -426,7 +426,7 @@ http://pikzie.sourceforge.net/assertions.html
 加することができます。::
 
   import pikzie
-  
+
   class TestYourModule(pikzie.TestCase):
       @pikzie.bug(123)
       def test_invalid_input(self):
@@ -468,14 +468,13 @@ pikzie.priority(priority)
 謝辞
 ----
 
-  * aztmさん
+* aztmさん
 
-    * バグレポートをしてくれました。
+  * バグレポートをしてくれました。
 
-    * ebuildを作ってくれました。
-      http://diary.atzm.org/20081201.html#p01
+  * ebuildを作ってくれました。
+    http://diary.atzm.org/20081201.html#p01
 
-  * Hideo Hattoriさん
+* Hideo Hattoriさん
 
-    * バグレポートをしてくれました。
-
+  * バグレポートをしてくれました。
